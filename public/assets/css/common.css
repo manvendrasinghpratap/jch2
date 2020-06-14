@@ -1,0 +1,10 @@
+.error{
+    color: red;
+    padding: 5px 0px 0px 0px;
+    font-weight: 600;
+}
+.required{
+    content: "*";
+    color: red;
+    font-weight: 600;
+}

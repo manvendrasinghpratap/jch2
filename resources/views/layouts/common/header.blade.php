@@ -23,8 +23,8 @@
 		  <ul class="navbar-nav navbar-nav-right">
 			<li class="nav-item nav-profile dropdown">
 			  <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-				<div class="nav-profile-img">
-				  <img src="{{ asset('public/assets/images/faces/face1.jpg ') }}" alt="image" />
+				<div class="nav-profile-img"><?php $imageName = 'face1.jpg'; if(!empty(Session::get('picName'))) { $imageName = Session::get('picName'); }  ?>
+				  <img src='{{ asset("public/upload/images/$imageName") }}' alt="image" />
 				</div>
 				<div class="nav-profile-text">
 				  <p class="text-black font-weight-semibold m-0"> {{ Auth::user()->name }} </p>
@@ -32,8 +32,13 @@
 				</div>
 			  </a>
 			  <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-				<a class="dropdown-item" href="#">
-				  <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
+				<a class="dropdown-item" href="{{route('profile')}}">
+				  <i class="mdi mdi-face-profile mr-2 text-success"></i> Profile </a>
+				</a>
+				<a class="dropdown-item" href="{{route('change-password-form')}}">
+				  <i class="mdi mdi-key-variant mr-2 text-success"></i> Change Password 
+				</a>
+				  
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 				  <i class="mdi mdi-logout mr-2 text-primary"></i> {{ __('Logout') }} </a>

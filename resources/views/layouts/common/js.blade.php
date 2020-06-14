@@ -1,5 +1,8 @@
+<script src="{{ asset('public/assets/vendors/jquery/jquery-1.11.2.min.js') }}"></script>
 <script src="{{ asset('public/assets/vendors/js/vendor.bundle.base.js') }}"></script>
 <!-- endinject -->
+<script src="{{ asset('public/assets/vendors/select2/select2.min.js') }}"></script>
+<script src="{{ asset('public/assets/vendors/typeahead.js/typeahead.bundle.min.js') }}"></script>
 <!-- Plugin js for this page -->
 <script src="{{ asset('public/assets/vendors/jquery-bar-rating/jquery.barrating.min.js') }}"></script>
 <script src="{{ asset('public/assets/vendors/chart.js/Chart.min.js') }}"></script>
@@ -18,3 +21,5 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src="{{ asset('public/assets/js/dashboard.js') }}"></script>
+<script src="{{ asset('public/assets/vendors/datepicker/datepicker.js') }}"></script>
+<script src="{{ asset('public/assets/js/common.js') }}"></script>

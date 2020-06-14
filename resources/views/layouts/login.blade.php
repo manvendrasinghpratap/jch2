@@ -12,20 +12,21 @@
     <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.png')}}" />
   </head>
   <body>
-    <div class="container-scroller">
+	<div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">
         <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
           <div class="row flex-grow">
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
               <div class="auth-form-transparent text-left p-3">
                 <div class="brand-logo">
-                  <img src="https://www.bootstrapdash.com/demo/plus/jquery/template/assets/images/logo.svg" alt="logo">
+					<img src="{{ asset('public/assets/images/logo.svg')}}" alt="logo">
                 </div>
-					@yield('content')
-				</div>
+                	@include('layouts.common.toastr')
+                  @yield('content')
+              </div>
             </div>
-            <div class="col-lg-6 login-half-bg d-flex flex-row">
-              <p class="text-white font-weight-semibold text-center flex-grow align-self-end">Copyright &copy; {{date('Y')}} All rights reserved.</p>
+            <div class="col-lg-6 register-half-bg d-flex flex-row">
+              <p class="text-white font-weight-semibold text-center flex-grow align-self-end">Copyright &copy; 2018 All rights reserved.</p>
             </div>
           </div>
         </div>

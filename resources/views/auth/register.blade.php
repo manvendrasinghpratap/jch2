@@ -1,6 +1,6 @@
-@extends('layouts.register')
+@extends('layouts.login')
 @section('content')
-<h4>New here?</h4>
+		<h4>New here?</h4>
 		<h6 class="font-weight-light">Join us today! It takes only few steps</h6>
 		<form class="pt-3" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
 		 @csrf

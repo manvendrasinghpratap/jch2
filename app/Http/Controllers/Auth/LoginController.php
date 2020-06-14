@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
+use Session;
+use Redirect;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
-use Redirect;
 
 class LoginController extends Controller
 {
@@ -46,10 +48,12 @@ class LoginController extends Controller
 	}
 	 protected function authenticated(Request $request, $user)
     {
-		$notification = array(
-		'message' => 'Successful login!', 
-		'alert-type' => 'success'
-		);
+      $notification = array(
+        'message' => 'Successful login!', 
+        'alert-type' => 'success'
+      );
+      $picName = Auth::user()->userDetails->image_name;
+      Session::put('picName', $picName);
 		return Redirect::to('/dashboard')->with($notification);
     }
 	

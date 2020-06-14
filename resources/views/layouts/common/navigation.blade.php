@@ -2,12 +2,12 @@
   <div class="container">
 	<ul class="nav page-navigation">
 	  <li class="nav-item">
-		<a class="nav-link" href="index.html">
+		<a class="nav-link" href="{{url('/')}}">
 		  <i class="mdi mdi-compass-outline menu-icon"></i>
 		  <span class="menu-title">Dashboard</span>
 		</a>
 	  </li>
-	  <li class="nav-item">
+	  <!-- <li class="nav-item">
 		<a href="#" class="nav-link">
 		  <i class="mdi mdi-monitor-dashboard menu-icon"></i>
 		  <span class="menu-title">UI Elements</span>
@@ -26,8 +26,8 @@
 			</li>
 		  </ul>
 		</div>
-	  </li>
-	  <li class="nav-item">
+	  </li> -->
+	  <!-- <li class="nav-item">
 		<a class="nav-link" href="pages/forms/basic_elements.html">
 		  <i class="mdi mdi-clipboard-text menu-icon"></i>
 		  <span class="menu-title">Forms</span>
@@ -55,27 +55,27 @@
 		<a href="https://www.bootstrapdash.com/demo/plus-free/documentation/documentation.html" class="nav-link" target="_blank">
 		  <i class="mdi mdi-file-document-box menu-icon"></i>
 		  <span class="menu-title">Docs</span></a>
-	  </li>
+	  </li> -->
 	  <li class="nav-item">
 		<div class="nav-link d-flex">
-		  <button class="btn btn-sm bg-danger text-white"> Trailing </button>
-		  <div class="nav-item dropdown">
-			<a class="nav-link count-indicator dropdown-toggle text-white font-weight-semibold" id="notificationDropdown" href="#" data-toggle="dropdown"> English </a>
+		   <button class="btn btn-sm bg-danger text-white"> Trailing </button> 
+		   <div class="nav-item dropdown">
+			<a class="nav-link count-indicator dropdown-toggle text-white font-weight-semibold" id="notificationDropdown" href="#" data-toggle="dropdown"> Admin </a>
 			<div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-			  <a class="dropdown-item" href="#">
-				<i class="flag-icon flag-icon-bl mr-3"></i> French </a>
+			  <a class="dropdown-item" href="{{route('users-listing')}}">
+				<i class="flag-icon flag-icon-bl mr-3"></i> {{ __('Users') }} </a>
 			  <div class="dropdown-divider"></div>
-			  <a class="dropdown-item" href="#">
+			  <!-- <a class="dropdown-item" href="#">
 				<i class="flag-icon flag-icon-cn mr-3"></i> Chinese </a>
 			  <div class="dropdown-divider"></div>
 			  <a class="dropdown-item" href="#">
 				<i class="flag-icon flag-icon-de mr-3"></i> German </a>
 			  <div class="dropdown-divider"></div>
 			  <a class="dropdown-item" href="#">
-				<i class="flag-icon flag-icon-ru mr-3"></i>Russian </a>
+				<i class="flag-icon flag-icon-ru mr-3"></i>Russian </a> -->
 			</div>
-		  </div>
-		  <a class="text-white" href="index.html"><i class="mdi mdi-home-circle"></i></a>
+		  </div> 
+		  <a class="text-white" href="{{url('/')}}"><i class="mdi mdi-home-circle"></i></a>
 		</div>
 	  </li>
 	</ul>

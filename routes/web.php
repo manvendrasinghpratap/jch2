@@ -19,3 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+/*user*/
+
+Route::get('/users-listing', 'UserController@index')->name('users-listing');
+Route::get('/profile', 'UserController@profile')->name('profile');
+Route::post('/profile/update', 'UserController@update')->name('profile-update');
+Route::get('/change-password-form', 'UserController@showChangePasswordForm')->name('change-password-form');
+Route::post('/update-change-password', 'UserController@postChangePassword')->name('update-change-password');
+
+
+

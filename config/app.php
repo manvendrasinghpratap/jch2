@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'JCH'),
 
     /*
     |--------------------------------------------------------------------------
@@ -107,7 +107,9 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
-
+    
+    'date_show_format'=>'m/d/Y',
+    'date_store_format'=>'y/m/d',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -210,6 +212,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Helper' => App\Helpers\Helper::class,
 
     ],
 
