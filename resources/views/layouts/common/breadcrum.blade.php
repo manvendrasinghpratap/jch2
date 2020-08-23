@@ -3,7 +3,7 @@
 	<h3 class="page-title">{{@$pageTitle}}</h3>
   </div>
   @if(@$breadCrum)
-  <div class="header-right d-flex flex-wrap mt-md-2 mt-lg-0">
+  <!-- <div class="header-right d-flex flex-wrap mt-md-2 mt-lg-0">
 	<div class="d-flex align-items-center">
 	  <a href="{{url('/')}}">
 		<p class="m-0 pr-3">Dashboard</p>
@@ -11,7 +11,7 @@
 	</div>
 	<button type="button" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
 	  <i class="mdi mdi-plus-circle"></i> Add User </button>
-  </div>
+  </div> -->
 @endif
 </div>
 	@if(@$breadCrum)
